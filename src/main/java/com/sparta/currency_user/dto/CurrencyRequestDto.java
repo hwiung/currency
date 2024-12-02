@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @Getter
 
 public class CurrencyRequestDto {
-    @NotNull(message = "currencyName 값은 필수입니다999999")
+    @NotNull(message = "currencyName 값은 필수입니다11999999")
     private String currencyName;
     @NotNull(message = "exchangeRate 값은 필수입니다")
     private BigDecimal exchangeRate;
@@ -17,6 +17,35 @@ public class CurrencyRequestDto {
     private String symbol;
 
     public Currency toEntity() {
+        return new Currency(
+                this.currencyName,
+                this.exchangeRate,
+                this.symbol
+        );
+    }
+
+    public Currency toEntity1() {
+        return new Currency(
+                this.currencyName,
+                this.exchangeRate,
+                this.symbol
+        );
+    }
+    public Currency toEntity11() {
+        return new Currency(
+                this.currencyName,
+                this.exchangeRate,
+                this.symbol
+        );
+    }
+    public Currency toEntity2() {
+        return new Currency(
+                this.currencyName,
+                this.exchangeRate,
+                this.symbol
+        );
+    }
+    public Currency toEntity3() {
         return new Currency(
                 this.currencyName,
                 this.exchangeRate,

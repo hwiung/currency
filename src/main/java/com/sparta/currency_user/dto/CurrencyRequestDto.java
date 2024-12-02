@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @Getter
 
 public class CurrencyRequestDto {
-    @NotNull(message = "currencyName 값은 필수입니다777")
+    @NotNull(message = "currencyName 값은 필수입니다999999")
     private String currencyName;
     @NotNull(message = "exchangeRate 값은 필수입니다")
     private BigDecimal exchangeRate;

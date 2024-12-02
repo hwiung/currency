@@ -26,6 +26,7 @@ public class CurrencyController {
         return ResponseEntity.ok().body(currencyService.findById(id));
     }
 
+
     @PostMapping
     public ResponseEntity<CurrencyResponseDto> createCurrency(@RequestBody @Valid CurrencyRequestDto currencyRequestDto) {
         return ResponseEntity.ok().body(currencyService.save(currencyRequestDto));

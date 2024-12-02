@@ -7,8 +7,11 @@ import lombok.Getter;
 import java.math.BigDecimal;
 
 @Getter
+
 public class CurrencyRequestDto {
+
     @NotNull(message = "currencyName 값은 필수입니다123")
+
     private String currencyName;
     @NotNull(message = "exchangeRate 값은 필수입니다")
     private BigDecimal exchangeRate;
@@ -23,3 +26,4 @@ public class CurrencyRequestDto {
         );
     }
 }
+

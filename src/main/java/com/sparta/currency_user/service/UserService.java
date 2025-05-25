@@ -32,8 +32,16 @@ public class UserService {
 
     @Transactional
     public UserResponseDto save(UserRequestDto userRequestDto) {
-        User savedUser = userRepository.save(userRequestDto.toEntity());
-        return new UserResponseDto(savedUser);
+        User user = new User(userRequestDto.getEmail(),userRequestDto.getName());
+        User savedUser = userRepository.save(user);
+
+        UserResponseDto userResponseDto = new UserResponseDto(savedUser.getId(),savedUser.getName(), savedUser.getEmail());
+        return userResponseDto;
+
+
+
+//        User savedUser = userRepository.save(userRequestDto.toEntity());
+//        return new UserResponseDto(savedUser);
     }
 
     @Transactional

@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 
 @Entity
 @Getter
-
 public class ExchangeClaim extends BaseEntity{
 
     @Id
